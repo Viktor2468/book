@@ -1,13 +1,47 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slick-slide > div {
+  margin: 0 4px;
+  outline: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.slick-prev {
+  left: -1 !important;
+  z-index: 1;
+}
+.slick-next {
+  right: 0 !important;
+  z-index: 1;
+}
+
+.slick-prev::before {
+  opacity: 1 !important;
+  font-size: 40px !important;
+  color: #003580 !important;
+}
+
+.slick-next::before {
+  opacity: 1 !important;
+  font-size: 40px !important;
+  color: #003580 !important;
+}
+
+
+
+.popularList > .slick-list > .slick-track {
+  padding-bottom: 20px;
+}
+
+.popularList > .slick-list > .slick-track > .slick-slide > div {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 12px;
+  transition: 200ms all ease-in-out;
+
+}
+
+.popularList > .slick-list > .slick-track > .slick-slide > div:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
 }
